@@ -10,8 +10,25 @@
 // ... Spread operator is used to concatinate two or more objects
 // we can Also concatinate using object.assign({}, obj1, obj2)
 
+// Object destructuring : We use curly Brackets {} for Object Desturing. 
+// const {property_name} = Object_name
+// We can access it directly using  => console.log(property_name)
+// const {property_name : anything} = Object_name       console.log(anything)           Either way is possible
 
+//Json :  Json is nothing but an Object or Array of Object without name
+//Java Script Object Notation
 
+// {
+//     "name" : "mohit",
+//     "coursename" : "js in hindi",
+//     "price" : "free"
+// }
+
+// [
+//     {},
+//     {},
+//     {}
+// ]
 
 
 
