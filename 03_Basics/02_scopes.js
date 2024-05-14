@@ -1,3 +1,16 @@
+//Summary
+
+//Basic Scoping 
+// function inside function
+//Expression can't be called about the function but Normal functions can be
+
+
+
+
+
+
+
+
 // let a =10
 // const b=20
 // var c =30
