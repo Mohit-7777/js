@@ -77,3 +77,36 @@ console.log(Object.values(tinderUser)); // This method is used to collect all th
 console.log(Object.entries(tinderUser));
 
 console.log(tinderUser.hasOwnProperty('name')); // output in boolean
+
+
+const course = {
+    coursename : "Js in hindi",
+    price : "999",
+    courseInstructor : "Mohit",
+}
+
+// course.courseInstructor              Instead of using . operator everytime 
+
+const {coursename}= course              // we can make the properties of the object a variable and directly log them.
+console.log(coursename);                // This is know as destructuring
+                                        // Curly Brackets {} refers to destructuring...
+
+
+const {coursename : name }= course       //also we can name the properties and make them as a variable 
+console.log(name)
+
+
+//Json :  Json is nothing but an Object or Array of Object without name
+//Java Script Object Notation
+
+// {
+//     "name" : "mohit",
+//     "coursename" : "js in hindi",
+//     "price" : "free"
+// }
+
+// [
+//     {},
+//     {},
+//     {}
+// ]
