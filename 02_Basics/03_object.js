@@ -1,3 +1,15 @@
+//All methods that are used here  // Summary
+
+// 1.Symbol() : Used to define Symbol datatype
+// 2.Square Brackets[]  are used to represent the Symbol dataType inside an object
+// 3. To access the Symbol data Type we use [Symbol_datatype_property_name]
+// 4. We can access the properties of an object using the . operator and also by using ["property_name"]
+// 5. To access the property of an object inside the method of the same object we use this keyword
+
+
+
+
+
 //Singleton :- when object is created using constructor
 
 // When creating object as literal its non singleton        (Object Literal)
