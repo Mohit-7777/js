@@ -1,3 +1,17 @@
+//Summary
+
+// How this keyword is used to access the value inside the function of an object
+ // In node Environment this keyword refers to an empty object but in windows it is a window Object
+// When logging a variable of a function with this keyword      // Undefined   It works only on objects and we can't use it in a function
+// This keyword INSIDE Function and Objs        // This gives a lot of data like global or sth
+// This keyword INSIDE Arrow Function           // Empty Object ...  Different as compared to Normal Function
+
+//Arrow Function        //IMPLICIT RETURN AND EXPLICIT RETURN
+
+//Arrow Function with Objects Inside        () are Mandetory    eg: const hello = () =>({user: "Mohit"})    ({}) is mandetory
+
+
+
 const user = {
     username: "Mohit",
     price: 999,
