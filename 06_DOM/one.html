@@ -1,0 +1,184 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM learning</title>
+    <style>
+        .bg-black{
+            background-color: black;
+            color: white;
+        }
+    </style>
+</head>
+<body class="bg-black">
+    <div>
+        <h1 id="title" class="heading">Document Object Model<span style="display: none"> test text </span> </h1>
+        <h2>Lorem ipsum dolor sit amet.</h2>
+        <h2>Labore ratione vero tempore quas!</h2>
+        <h2>Quia porro sequi necessitatibus corporis!</h2>
+        <p>Lorem ipsum dolor sit amet.</p>
+        <input type="password">
+    </div>
+</body>
+</html>
+
+
+<!-- output
+
+document.getElementById('title').className
+'heading'
+
+
+document.getElementById('title').id
+'title'
+
+
+document.getElementById('title').innerHTML
+'Document Object Model'
+
+
+document.getElementById('title').getAttribute('class')
+'heading'
+
+document.getElementById('title').setAttribute('class' ,'test');         "test" class will override the the previous class "heading" 
+undefined
+
+
+document.getElementById('title').setAttribute('class' ,'test heading');   "test" and "heading" both are the classes for the tag   
+undefined
+
+
+-------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+document.getElementById('title')
+we will receive the flul element whose id is title
+
+
+const title = document.getElementById('title')
+undefined
+title.style.backgroundColor = "Orange";
+'Orange'
+
+
+title.style.padding = "15px"
+'15px'
+
+
+title.style.borderRadius = "15px"
+'15px'
+
+
+-------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+title.textContent
+'Document Object Model'
+
+title.innerHTML
+'Document Object Model'
+
+title.innerText
+'Document Object Model'
+
+
+
+title.innerText                         The text inside the tag which we see on the browser
+'Document Object Model'
+
+title.textContent                       All the text present will be shown even if the text has beeen "displayed none"
+'Document Object Model test text  '
+
+title.innerHTML                                                             All the text and tags and attributes will be shown
+'Document Object Model<span style="display: none"> test text </span> '
+
+
+-------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+document.getElementsByClassName('heading')
+HTMLCollection [h1#title.heading, title: h1#title.heading]              HTML Collection
+0: h1#title.heading
+title: h1#title.heading
+
+length: 1[[Prototype]]: HTMLCollectionitem: ƒ item()
+length: (...)
+namedItem: ƒ namedItem()
+constructor: ƒ HTMLCollection()
+Symbol(Symbol.iterator): ƒ values()
+Symbol(Symbol.toStringTag): "HTMLCollection"get length: ƒ length()
+[[Prototype]]: Object
+
+
+HTML Collection is Similar to NodeList that we get using querySelectorAll but 
+We get a lot of method in querySelectorAll like forEach
+
+
+
+const y = document.getElementsByClassName('heading')
+
+y.length
+1
+Array.from(y)       {TO CONVERT HTML COLLECTION INTO ARRAY}
+[h1#title.heading]0: h1#title.headinglength: 1[[Prototype]]: Array(0)
+
+not available
+﻿
+const y = document.getElementsByClassName('heading')
+undefined
+const z = Array.from(y)
+undefined
+z.forEach((l)=>{
+    l.style.backgroundColor = "pink"
+})
+undefined
+
+-------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+document.querySelector('h2')
+It will select the very first h2 element
+
+document.querySelector('#title')
+We can select the tag just like we select tags in CSS
+for eg :- using "#title" id Selector
+
+document.querySelector('.heading')
+.heading is a class just like #title is an id
+
+
+document.querySelector('input[type="password"]')
+Using the attributes we can select a particular tag
+
+
+
+const fh2 = document.querySelector('h1:first-child')    Only selects if h1 is the first Child not second/third or so on
+undefined
+fh2.style.color = "coral"
+'coral'
+
+
+fh2.innerText = "Mohit Bisht"       
+'Mohit Bisht'
+
+
+-------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+document.querySelectorAll('h2')
+NodeList(3) [h2, h2, h2]
+
+NodeList is similar to Array but they are not array
+tho it has forEach method but it is not Array
+
+
+const x = document.querySelectorAll('h2')
+undefined
+x.forEach(x=>x.style.backgroundColor = 'coral')
+undefined
+
+
+
+
+
+-->
