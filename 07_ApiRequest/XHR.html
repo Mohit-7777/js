@@ -1,0 +1,59 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="myP"></p>
+    <button onclick="sendRequest()">Send Requeset</button>
+</body>
+<script>
+
+    const p = document.getElementById('myP')
+
+    function sendRequest(){
+
+    //to create an http request we need to create an instance of the XMLHttpRequest class
+    // XMLHttpRequest class is build into browssers so there is no need to install any libraries
+    const xhr = new XMLHttpRequest(); //after instanciating the class we need to tell where we want to send the request
+    // and now we need to initialize it
+    xhr.open('GET', `https://jsonplaceholder.typicode.com/users/${Math.floor(Math.random() * 6) + 1}`);
+    //GET request is essentially used to retrieve data from the provided url, the second argument tell where to send the request to.
+    //Now we have setedup the http request, we need to send it off and that is done with
+    xhr.send(); 
+
+    // Now we have sent the request but we are not responding to it
+    //This request that we sent returns an array, a json array of users
+
+
+
+    //Now if we need to display the data on our page we need to handle the response
+    //we need to use the xhr object called onreadystatechange
+
+    
+    xhr.onreadystatechange=()=>{
+        //This method is called whenever the xhr.readystate changes
+        //readystate() can have a number from 0 to 4 where each number represents the state of xmlhttprequest
+        //if readystate===4 it means the operation is completed, data transfer is successful or failed
+        // if(xhr.readyState===4)
+
+        //if status === 200 it means the request is successful
+        
+        
+        if(xhr.readyState===4 && xhr.status === 200){
+
+            console.log("completed successfully");
+
+            // document.write(xhr.response)
+
+            p.innerText = xhr.response;
+            
+        }
+
+    }
+}
+    
+
+</script>
+</html>
