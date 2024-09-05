@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>JavaScript on GITHUB</h1>
+    <button id="Start">Start</button>
+    <button id="Stop">Stop</button>
+</body>
+<script>
+    const sayDate = function(str) {
+        console.log(str, Date.now());
+    }
+
+    let intervalId; // Declare intervalId in a higher scope
+
+    // Start the interval on Start button click
+    document.getElementById("Start").onclick = () => {
+        if (!intervalId) { // Check if an interval is already running
+            intervalId = setInterval(sayDate, 1000, "Mohit");
+        }
+    };
+
+    // Stop the interval on Stop button click
+    document.getElementById("Stop").onclick = () => {
+        clearInterval(intervalId);
+        intervalId = null; // Reset intervalId so it can be restarted
+    };
+</script>
+</html>
