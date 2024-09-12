@@ -93,7 +93,7 @@ consumePromiseFive()
 //         const response = await fetch('https://jsonplaceholder.typicode.com/users')
 //     //    console.log(response);
        
-//         const data = await response.json();
+//         const data = await response.json();          //It takes time to convert the data into json so await is used
 //         console.log(data);
         
 //     }
