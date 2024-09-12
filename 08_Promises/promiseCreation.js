@@ -87,3 +87,29 @@ async function consumePromiseFive() {
    }
 }
 consumePromiseFive()
+
+// async function getAllUsers(){
+//     try{
+//         const response = await fetch('https://jsonplaceholder.typicode.com/users')
+//     //    console.log(response);
+       
+//         const data = await response.json();
+//         console.log(data);
+        
+//     }
+//     catch(error){
+//         console.log("E : ", error);
+        
+//     }
+    
+// }
+
+// getAllUsers();
+
+
+fetch('https://jsonplaceholder.typicode.com/users')         //this will execute first before all the code above... why??????
+.then((response)=>{
+    return response.json()
+}).then((data)=> console.log(data))
+.catch((error)=> console.log("ER :", error)
+)
